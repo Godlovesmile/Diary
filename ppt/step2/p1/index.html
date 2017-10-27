@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>iWeb学院</title>
+		<link rel="stylesheet" type="text/css" href="css/cancss.css"/>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/canjs.js" type="text/javascript" charset="utf-8">
+		</script>
+    <style>
+      .k-next {
+        position: fixed;
+        right: 0;
+        z-index: 899;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+      }
+      .k-next a {
+        display: block;
+        width: 100px;
+        text-align: center;
+        height: 100px;
+        background: #f60;
+        color: #fff;
+        line-height: 100px;
+        font-size: 24px;
+        border-radius: 50%;
+        text-decoration: none;
+        margin-top: -50px;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        transition: all 1s
+      }
+      .k-next a:hover {
+        border-radius: 60% 70% 40% 80%;
+      }
+    </style>
+	</head>
+	<body>
+		
+		<canvas id="cantovalu" style="z-index: 3;">你的浏览器不支持canvas</canvas>
+                                                      <!--
+                                                      	作者：a1248342301@163.com
+                                                      	时间：2017-04-11
+                                                      	描述：绘画层
+                                                      -->
+		<canvas id="cantotest" style="z-index: 5;" onmousedown="myonclick()" onmouseup="up()" onmouseover="up()" onmousemove="otest(event)">你的浏览器不支持canvas</canvas>
+                                                      <!--
+                                                      	作者：a1248342301@163.com
+                                                      	时间：2017-04-11
+                                                      	描述：支持层
+                                                      -->
+        <div id="box" onmouseup="panup()" >
+        	<p onmousedown="panto()" onmouseup="panup()" onmousemove="">基础面板-HD</p>
+        	<div id="ocolor">
+        	</div>
+        	<div id="tocolor">
+        		<span>红</span><div class="backcolor" id="but">
+        			<div id="redbut" class="valu" style="background-color: red;" onmousedown="redto()" onmouseup="panup()"></div>
+        		</div>
+        		<span>绿</span><div class="backcolor">
+        			<div id="grebut" class="valu" style="background-color: green;" onmousedown="greento()" onmouseup="panup()"></div>
+        		</div>
+        		<span>蓝</span><div class="backcolor">
+        			<div id="blubut" class="valu"style="background-color: blue;" onmousedown="blueto()" onmouseup="panup()"></div>
+        		</div>
+        		<span>透明</span><div class="backcolor">
+        			<div id="tranbut" class="valu" style="background-color: dimgray;margin-left: 127px;" onmousedown="teanto()" onmouseup="panup()"></div>
+        		</div>
+        		<span>Size</span><div class="backcolor">
+        			<div id="sizbut" class="valu" style="background-color: cyan;margin-left: 2px;" onmousedown="sizeto()" onmouseup="panup()"></div>
+        		</div>
+        		<button onclick="toS()">保存画面</button>
+        		<div id="ap" class="opn" onclick="heightlong()">
+        		</div>
+        		<button id="overs" style="margin-top: 30px;" onclick="overclick()">开启橡皮擦</button>
+        		<span style="display: block;float: left;margin-top: 50px;">Size</span>
+        		<div class="backcolor">
+        			<div id="overbut" class="valu" style="background-color: bisque;margin-left: 2px;" onmousedown="overto()" onmouseup="panup()"></div>
+        		</div>
+        		<button id="Strokes" style="margin-top: 10px;" onclick="Strokesclick(this)">圆形笔触</button>
+        		<button id="Graphical" style="margin-top: 10px;" onclick="Graphicalclick(this)">绘制线条</button><br />
+        		<span style="display: block; width: 100%;">图形填充颜色</span>
+        		<br />
+        		<span style="display:block;line-height: 20px;">#</span>
+        		<input type="text" name="" id="colorvalu" value="000000" style="display: block;width: 60px;margin-top: 10px;float: left;"/>
+        		<span onclick="colorand(this)" style="display:block;line-height: 5px;background-color: aqua;height: 12px;margin-top: 10px;">更新</span>
+        	</div>
+        </div>
+	<div class="k-next">
+		<a href="/step2/p2/index.html">NEXT</a>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<title>精英开发者培养计划_iWeb学院</title>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<link rel="stylesheet" type="" href="type.css">
+	<style>
+		.k-next{
+            position: fixed;
+            right: 0;
+            z-index: 889;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+          }
+          .k-btn {
+          	position: fixed;
+            right: 0;
+            z-index: 889;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+          }
+          .k-next a,.k-btn input {
+            display: block;
+            width: 100px;
+            text-align: center;
+            height: 100px;
+            background: #f60;
+            cursor: pointer;
+            color: #fff;
+            line-height: 100px;
+            font-size: 24px;
+            border-radius: 50%;
+            text-decoration: none;
+            margin-top: -50px;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            transition: all 1s;
+            border: none;
+          }
+          .k-next a:hover,.k-btn input:hover {
+            border-radius: 60% 70% 40% 80%;
+          }
+
+	</style>
+</head>
+<body>
+<div class="k-next">
+    <a href="/step5/index.html">NEXT</a>
+</div>
+<div class="k-btn">
+<input type="button" value="ALLIN" id="btn"/>
+</div>
+	<div id="screen"></div>
+	<q id="tree">
+		{{ myData.title }}
+		<q v-for="item_1 in myData.items">
+			{{ item_1.title }}
+			<q v-for="item_2 in item_1.items">
+				{{ item_2.title }}
+				<q v-for="item_3 in item_2.items">
+					{{ item_3.title }}
+					<q v-for="item_4 in item_3.items">
+						{{ item_4.title }}
+						<q v-for="item_5 in item_4.items">
+							{{ item_5.title }}
+						</q>
+					</q>
+				</q>
+			</q>
+		</q>
+	</q>
+	<script src="js/data.js"></script>
+	<script src="js/vue.js"></script>
+	<script>
+		console.log(theData.main)
+		var vm = new Vue({
+			el: "#tree",
+			data: {
+				myData: theData.main,
+			}
+		})
+	</script>
+	<script src="js/one.js"></script>
+	<script src="js/two.js"></script>
+	<script src="js/three.js"></script>
+</body>
+
+</html>

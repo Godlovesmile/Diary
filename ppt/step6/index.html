@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>精英开发者培养计划_iWeb学院</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        li {
+            list-style:none;
+        }
+        .li1 {
+            position: fixed;
+            left:0;
+            top:0;
+        }
+        .li2 {
+            position: fixed;
+            right:0;
+            top:0;
+        }
+        .li3 {
+            position: fixed;
+            left:50%;
+            bottom:0;
+            margin-left:-326px;
+        }
+        .k-next {
+            position: fixed;
+            right: 0;
+            z-index: 899;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+          }
+          .k-next a {
+            display: block;
+            width: 100px;
+            text-align: center;
+            height: 100px;
+            background: #f60;
+            color: #fff;
+            line-height: 100px;
+            font-size: 24px;
+            border-radius: 50%;
+            text-decoration: none;
+            margin-top: -50px;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            transition: all 1s
+          }
+          .k-next a:hover {
+            border-radius: 60% 70% 40% 80%;
+          }
+          .allin {
+             position: fixed;
+              width: 500px;
+              margin: -40px 0 0 -250px;
+              left: 50%;
+              top: 50%;
+              height: 80px;
+              line-height: 80px;
+              text-align: center;
+              font-size: 40px;
+          }
+          .case {
+             text-align: center;
+             display: none;
+          }
+          .case1 {
+            position: fixed;
+            z-index: 6;
+            left: 0;
+            bottom: 0;
+          }
+          .case2 {
+            position: fixed;
+            z-index: 5;
+            right: 300px;
+            top: 0;
+          }
+          .case3 {
+            position: fixed;
+            z-index: 7;
+            right: 0;
+            bottom: 0;
+          }
+    </style>
+</head>
+<body>
+<!-- 现在怎么地（抛出弊端，谷歌，翻墙）
+企业里怎么用 -->
+<div class="k-next">
+    <a href="/step7/index.html">NEXT</a>
+</div>
+<div class="case case1" id="case1">
+    <img src="images/timg.jpeg" alt="">
+</div>
+<div class="case case2" id="case2">
+    <img src="images/t3.gif" alt="">
+</div>
+<div class="case case3" id="case3">
+    <img src="images/test.gif" alt="">
+</div>
+<script>
+var btn = 1;
+    document.onkeydown = function(e){
+        var event = e || window.event;
+        
+        if(event.keyCode==39){
+          console.log(btn)
+            if(btn == 1 ){
+                document.getElementById('case1').style.display = 'block';
+                btn = 2;
+
+            }else if(btn==2){
+                document.getElementById('case2').style.display = 'block';
+                btn = 3;
+            }else if(btn==3){
+                document.getElementById('case3').style.display = 'block';
+                btn = 4;
+                return false;
+            }
+        }
+    }
+</script>
+</body>
+</html>
